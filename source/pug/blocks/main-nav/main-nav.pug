@@ -1,0 +1,29 @@
+mixin main-nav(data)
+    -var className = 'main-nav'
+    -var active = ''
+
+    +el({
+        tag: 'ul',
+        class: className,
+        mod: data.mod,
+        mix: data.mix
+    })&attributes(attributes)
+        each item, index in data.items
+            if pageId && index == pageId - 1
+                -var active = ' active'
+            else
+                -var active = ''
+
+            +el({
+                tag: 'li',
+                class: className + '__item',
+                mix: active,
+                mod: item.mod,
+            })(itemprop='name')
+                +el({
+                    tag: 'a',
+                    class: className + '__link',
+                    text:item.text,
+                    href: item.href,
+                    js: item.js,
+                })(itemprop='url')

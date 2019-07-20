@@ -1,0 +1,34 @@
+mixin field(data)
+    +el({
+        tag: 'label',
+        class: 'field',
+        mod: data.mod,
+        mix: data.mix,
+        js: data.js,
+    })
+        if data.label
+            +el({
+                tag: 'span',
+                class: data.isLabel ? 'field__label' : 'hidden',
+                text: data.label,
+            })
+        +el({
+            tag: data.tag ? data.tag : 'input',
+            class: 'field__input',
+            type: data.type,
+            placeholder: data.placeholder,
+            value: data.value,
+            name: data.name,
+            pattern: data.pattern,
+            tabindex: '0',
+            readonly: data.readonly,
+            required: data.required,
+            min: data.min,
+            max: data.max,
+        })&attributes(attributes)
+        if data.icon
+            +el({
+                tag: 'svg',
+                class: 'field__icon',
+                icon: data.icon,
+            })

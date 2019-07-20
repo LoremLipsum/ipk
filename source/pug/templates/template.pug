@@ -1,0 +1,25 @@
+include ./include
+
+block vars
+    - var pageTitle = 'title'
+    - var main = false
+
+doctype html
+html(lang="ru-RU")
+    block head
+        +head()
+    body
+        block icon
+        block header
+            +header({})
+        block content
+        block footer
+            //- +footer({})
+        block button
+            //- +button-up({
+            //-     text: 'Наверх',
+            //-     js: 'page-up'
+            //- })
+        block modal
+        block scripts
+            +scripts()

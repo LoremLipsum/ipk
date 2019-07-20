@@ -1,0 +1,10 @@
+p {
+  margin: 0;
+  margin-bottom: 18px;
+}
+
+@include respond-to(large) {
+  p {
+    margin-bottom: 22px
+  }
+}

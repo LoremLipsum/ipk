@@ -1,0 +1,77 @@
+.button {
+  display: inline-block;
+  padding: 6px 8px;
+  border: none;
+  background-color: color(primary)
+  color: color(white);
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.02em;
+  text-align: center;
+  text-transform: uppercase;
+
+  &--large {
+    padding: 6px 16px;
+    font-size: 18px;
+    line-height: 22px;
+    letter-spacing: 0.05em;
+  }
+
+  &--secondary {
+    background-color: color(secondary);
+  }
+
+  &--border-white {
+    background-color: transparent;
+    border: 2px solid color(white);
+    color: color(white);
+  }
+
+  &--arrow {
+    position: relative;
+    padding-left: 35px;
+    padding-right: 35px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='10' viewBox='0 0 8 10'%3E%3Cpath d='M1 1L6 4.9 1 9' style='stroke-width:2;stroke:%23FFC704'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+    }
+  }
+}
+
+.button--secondary.button--arrow {
+  &::after {
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='10' viewBox='0 0 8 10'%3E%3Cpath d='M1 1L6 4.9 1 9' style='stroke-width:2;stroke:%2300274E'/%3E%3C/svg%3E");
+  }
+}
+
+@include respond-to(large) {
+  .button {
+    padding: 15px 25px;
+    font-size: 16px;
+    line-height: 20px;
+
+    &--large {
+      padding: 15px 25px;
+      font-size: 16px;
+      line-height: 20px;
+    }
+
+    &--arrow {
+      padding-left: 50px;
+      padding-right: 50px;
+
+      &::after {
+        width: 10px;
+        height: 10px;
+      }
+    }
+  }
+}

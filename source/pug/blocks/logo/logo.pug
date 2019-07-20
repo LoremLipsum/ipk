@@ -1,0 +1,11 @@
+mixin logo(data)
+    +el({
+        tag: 'a',
+        class: 'logo',
+        mod: data.mod,
+        mix: data.mix,
+        js: data.js,
+        href: main == true ? 'none' : 'main.html',
+        title: main == true ? data.title : 'Перейти на главную страницу',
+    })&attributes(attributes)
+        | ИП Казанцев А.В.

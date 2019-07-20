@@ -1,0 +1,39 @@
+$fonts: (
+  primary: #{"Roboto", "Pragmatica", "Arial", sans-serif, "Nimbus Sans L", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"},
+);
+
+$widths: (
+  small: 320px,
+  medium: 768px,
+  large: 1400px,
+);
+
+$pads: (
+  small: 20px,
+  medium: 40px,
+  large: 80px,
+);
+
+$colors: (
+  primary: #00274E,
+  secondary: #FFC704,
+  light: #FAF7F7,
+  black: #777373,
+  white: #fff,
+  gray: #ccc,
+  error: #d0021b,
+  disabled: #c9c9c6,
+  border: #DFDDDD,
+);
+
+// время анимаций
+$durations: (
+  norm: 0.3s,
+  long: 0.6s,
+);
+
+$func: (
+  primary: cubic-bezier(0.25, 0.1, 0.25, 1),
+);
+
+$change: 8%;

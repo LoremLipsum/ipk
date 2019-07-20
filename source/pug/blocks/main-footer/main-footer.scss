@@ -1,0 +1,55 @@
+.main-footer__wrapper {
+  @include wrapper;
+}
+
+.main-footer__main {
+  padding: 20px 0;
+  background-color: color(primary);
+  color: color(white);
+}
+
+.main-footer__contacts-link {
+  position: relative;
+  display: inline-block;
+  padding-left: 35px;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 21px;
+  letter-spacing: 0.05em;
+
+  &::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 20px;
+    height: 20px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
+
+  &--tel {
+    &::before {
+      background-image: url("../assets/images/phone.svg");
+    }
+  }
+
+  &--email {
+    &::before {
+      background-image: url("../assets/images/email.svg");
+    }
+  }
+}
+
+.main-footer__bottom {
+  padding: 10px 0;
+  background-color: #001D39;
+  color: color(white);
+}
+
+.main-footer__copyright {
+  font-weight: 300;
+  font-size: 10px;
+  line-height: 12px;
+  text-align: center;
+}

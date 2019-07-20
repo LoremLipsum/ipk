@@ -1,0 +1,22 @@
+mixin head(data)
+    -
+        var title = pageTitle
+        var description = 'description'
+        var keywords = 'keywords'
+
+    head
+        meta(charset='utf-8')
+        meta(name='viewport' content='width=device-width, initial-scale=1.0')
+        meta(content='IE=edge' http-equiv='X-UA-Compatible')
+        title= title
+
+        meta(name='description' content=description)
+        meta(name='keywords' content=keywords)
+
+        meta(name='format-detection' content='telephone=no')
+        meta(name='format-detection' content='address=no')
+
+        link(href="https://fonts.googleapis.com/css?family=Roboto:300,500,400,700&display=swap&subset=cyrillic" rel="stylesheet")
+        //- Styles
+        link(rel='stylesheet' href='./styles/lib.min.css')
+        link(rel='stylesheet' href='./styles/styles.min.css')

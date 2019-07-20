@@ -1,0 +1,58 @@
+table {
+  width: 100%;
+  margin-bottom: 20px;
+  border-collapse: collapse;
+  table-layout: auto;
+}
+
+th,
+td {
+  padding: 12px;
+  border: none;
+  border-bottom: 2px solid color(light);
+  text-align: center;
+
+  > *:first-child {
+    margin-top: 0;
+  }
+
+  > *:last-child {
+    margin-bottom: 0;
+  }
+
+  > * {
+    margin: 0 auto;
+  }
+}
+
+th {
+  font-weight: 500;
+  line-height: 1.3;
+  text-align: center;
+}
+
+td {
+
+}
+
+@include respond-to(medium) {
+  th,
+  td {
+    padding: 16px;
+  }
+
+  th {
+    font-size: get($fs, medium, size-28);
+  }
+}
+
+@include respond-to(large) {
+  th,
+  td {
+    padding: 20px;
+  }
+
+  th {
+    font-size: get($fs, large, size-28);
+  }
+}

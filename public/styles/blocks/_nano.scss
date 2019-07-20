@@ -1,0 +1,11 @@
+.nano > .nano-content {
+  padding-right: 15px;
+}
+
+.nano > .nano-pane {
+  background: rgba(color(secondary), 0.2);
+}
+
+.nano > .nano-pane > .nano-slider {
+  background: rgba(color(secondary), 0.5);
+}
