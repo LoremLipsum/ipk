@@ -28,8 +28,13 @@
 
   &--border-white {
     background-color: transparent;
-    border: 2px solid color(white);
+    border: 1px solid;
+    border-color: color(white);
     color: color(white);
+
+    @include hover {
+      border-color: rgba(color(white), 0.5);
+    }
   }
 
   &--arrow {

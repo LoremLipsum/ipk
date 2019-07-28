@@ -1,3 +1,143 @@
-.service-intro {
-  
+.service-intro__inner {
+  @include inner;
+}
+
+.service-intro__image-wrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.service-intro__image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  @include ofi(cover, center);
+}
+
+.service-intro__content {
+  min-height: 280px;
+}
+
+.service-intro__content-inner {
+  position: relative;
+  padding-top: 45px;
+  padding-bottom: 45px;
+
+  @include inner-md;
+}
+
+.service-intro__text-wrap {
+  position: relative;
+  z-index: 1;
+  width: 290px;
+  margin: 0 auto;
+  padding: 25px 20px;
+  background-color: rgba(color(primary), 0.74);
+}
+
+.service-intro__text {
+  margin-bottom: 25px;
+  color: color(white);
+  font-size: 12px;
+  line-height: 1.6;
+
+  p {
+    margin: 0;
+    margin-bottom: 20px;
+  }
+
+  @include first-last;
+}
+
+.service-intro__button-wrap {
+  text-align: center;
+}
+
+@include respond-to(medium) {
+  .service-intro__content {
+    display: flex;
+    flex-direction: column;
+    min-height: 40vw;
+  }
+
+  .service-intro__content-inner {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .service-intro__image-wrap {
+    width: calc(100% - 37vw);
+    left: auto;
+    right: pads(medium);
+  }
+
+  .service-intro__text-wrap {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    width: 37vw;
+    margin: 0;
+    padding: 4vw;
+    background-color: color(primary);
+  }
+
+  .service-intro__text {
+    font-size: 1.5vw;
+  }
+
+  .service-intro__button-wrap {
+    margin-top: auto;
+  }
+
+  .service-intro__button {
+    padding: 1vw 1.8vw;
+    font-size: 1.5vw;
+  }
+}
+
+@include respond-to(medium-lg) {
+  .service-intro__text {
+    font-size: 1.4vw;
+  }
+
+  .service-intro__button {
+    font-size: 1.3vw;
+  }
+}
+
+@include respond-to(large) {
+  .service-intro__content {
+    min-height: 564px;
+  }
+
+  .service-intro__content-inner {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  .service-intro__image-wrap {
+    width: 815px;
+    right: pads(large);
+  }
+
+  .service-intro__text-wrap {
+    width: 525px;
+    padding: 60px;
+  }
+
+  .service-intro__text {
+    margin-bottom: 50px;
+    font-size: 18px;
+  }
+
+  .service-intro__button {
+    padding: 15px 25px;
+    font-size: 16px;
+  }
 }

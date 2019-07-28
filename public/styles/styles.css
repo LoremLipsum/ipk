@@ -265,20 +265,35 @@ body
 }
 body > *
 {
-    width: 100%; 
-
     -ms-flex-negative: 0;
     flex-shrink: 0;
 }
 
 main
 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+        flex-direction: column; 
+
     -webkit-box-flex: 1;
     -ms-flex-positive: 1;
     flex-grow: 1;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+}
+main > *
+{
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+}
+main > *:last-child
+{
+    margin-top: auto;
 }
 
-.footer
+.main-footer
 {
     margin-top: auto;
 }
@@ -319,7 +334,37 @@ main
     background: rgba(255, 199, 4, .5);
 }
 
-.main-content__intro,
+.main-content--padding-top
+{
+    padding-top: 25px;
+}
+
+.main-content__inner
+{
+    padding-right: 20px; 
+    padding-left: 20px;
+}
+@media (min-width: 768px)
+{
+    .main-content__inner
+    {
+        padding-right: 40px; 
+        padding-left: 40px;
+    }
+}
+@media (min-width: 1400px)
+{
+    .main-content__inner
+    {
+        width: 1400px;
+        margin-right: auto;
+        margin-left: auto;
+        padding-right: 80px; 
+        padding-left: 80px;
+    }
+}
+
+.main-content__main-intro,
 .main-content__about,
 .main-content__features
 {
@@ -333,7 +378,11 @@ main
 
 @media (min-width: 768px)
 {
-    .main-content__intro,
+    .main-content--padding-top
+    {
+        padding-top: 35px;
+    }
+    .main-content__main-intro,
     .main-content__about,
     .main-content__features
     {
@@ -347,7 +396,11 @@ main
 
 @media (min-width: 1400px)
 {
-    .main-content__intro,
+    .main-content--padding-top
+    {
+        padding-top: 45px;
+    }
+    .main-content__main-intro,
     .main-content__about,
     .main-content__features
     {
@@ -398,8 +451,14 @@ main
 .button--border-white
 {
     color: #fff; 
-    border: 2px solid #fff;
+    border: 1px solid;
+    border-color: #fff;
     background-color: transparent;
+}
+.button--border-white:hover,
+.button--border-white:focus
+{
+    border-color: rgba(255, 255, 255, .5);
 }
 .button--arrow
 {
@@ -2329,5 +2388,249 @@ textarea.field__input
     .features-item--money
     {
         max-width: 200px;
+    }
+}
+
+.service-intro__inner
+{
+    padding-right: 20px; 
+    padding-left: 20px;
+}
+@media (min-width: 768px)
+{
+    .service-intro__inner
+    {
+        padding-right: 40px; 
+        padding-left: 40px;
+    }
+}
+@media (min-width: 1400px)
+{
+    .service-intro__inner
+    {
+        width: 1400px;
+        margin-right: auto;
+        margin-left: auto;
+        padding-right: 80px; 
+        padding-left: 80px;
+    }
+}
+
+.service-intro__image-wrap
+{
+    position: absolute;
+    top: 0;
+    right: 0; 
+    bottom: 0;
+    left: 0;
+}
+
+.service-intro__image
+{
+    font-family: 'object-fit: cover; object-position: center'; 
+
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: center;
+       object-position: center;
+}
+
+.service-intro__content
+{
+    min-height: 280px;
+}
+
+.service-intro__content-inner
+{
+    position: relative;
+
+    padding-top: 45px;
+    padding-bottom: 45px;
+}
+@media (min-width: 768px)
+{
+    .service-intro__content-inner
+    {
+        padding-right: 40px; 
+        padding-left: 40px;
+    }
+}
+@media (min-width: 1400px)
+{
+    .service-intro__content-inner
+    {
+        width: 1400px;
+        margin-right: auto;
+        margin-left: auto;
+        padding-right: 80px; 
+        padding-left: 80px;
+    }
+}
+
+.service-intro__text-wrap
+{
+    position: relative;
+    z-index: 1;
+
+    width: 290px;
+    margin: 0 auto;
+    padding: 25px 20px;
+
+    background-color: rgba(0, 39, 78, .74);
+}
+
+.service-intro__text
+{
+    font-size: 12px;
+    line-height: 1.6; 
+
+    margin-bottom: 25px;
+
+    color: #fff;
+}
+.service-intro__text p
+{
+    margin: 0;
+    margin-bottom: 20px;
+}
+.service-intro__text > *:first-child
+{
+    margin-top: 0 !important;
+}
+.service-intro__text > *:last-child
+{
+    margin-bottom: 0 !important;
+}
+
+.service-intro__button-wrap
+{
+    text-align: center;
+}
+
+@media (min-width: 768px)
+{
+    .service-intro__content
+    {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+            flex-direction: column;
+
+        min-height: 40vw; 
+
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+    }
+    .service-intro__content-inner
+    {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+            flex-direction: column;
+
+        padding-top: 20px;
+        padding-bottom: 20px; 
+
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+        flex-grow: 1;
+    }
+    .service-intro__image-wrap
+    {
+        right: 40px; 
+        left: auto;
+
+        width: calc(100% - 37vw);
+    }
+    .service-intro__text-wrap
+    {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+            flex-direction: column;
+
+        width: 37vw;
+        margin: 0;
+        padding: 4vw;
+
+        background-color: #00274e; 
+
+        -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+        flex-grow: 1;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+    }
+    .service-intro__text
+    {
+        font-size: 1.5vw;
+    }
+    .service-intro__button-wrap
+    {
+        margin-top: auto;
+    }
+    .service-intro__button
+    {
+        font-size: 1.5vw; 
+
+        padding: 1vw 1.8vw;
+    }
+}
+
+@media (min-width: 1024px)
+{
+    .service-intro__text
+    {
+        font-size: 1.4vw;
+    }
+    .service-intro__button
+    {
+        font-size: 1.3vw;
+    }
+}
+
+@media (min-width: 1400px)
+{
+    .service-intro__content
+    {
+        min-height: 564px;
+    }
+    .service-intro__content-inner
+    {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+    .service-intro__image-wrap
+    {
+        right: 80px; 
+
+        width: 815px;
+    }
+    .service-intro__text-wrap
+    {
+        width: 525px;
+        padding: 60px;
+    }
+    .service-intro__text
+    {
+        font-size: 18px; 
+
+        margin-bottom: 50px;
+    }
+    .service-intro__button
+    {
+        font-size: 16px; 
+
+        padding: 15px 25px;
     }
 }
