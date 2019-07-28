@@ -192,6 +192,54 @@
           </div>
         </div>
       </section>
+      <section class="object-map main-content__object-map js-object-map">
+        <div class="object-map__inner">
+          <h2 class="heading heading--centred">Карта объектов
+          </h2>
+          <div class="object-map__content">
+            <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
+            <script>
+              var pl = {
+                  style: 'islands#blueIcon',
+                  items: [
+                      {
+                          coords: [59.902180, 30.333818],
+                          balloonContent: '2БКТП, Санкт-Петербург',
+                          text: '2БКТП, Санкт-Петербург',
+                      },
+                      {
+                          coords: [60.002524, 30.247888],
+                          balloonContent: 'КТТП в Калтушай, Санкт-Петербург',
+                          text: 'КТТП в Калтушай',
+                      },
+                      {
+                          coords: [59.887125, 30.420236],
+                          balloonContent: 'БКРТП трехблочная, Санкт-Петербург',
+                          text: 'БКРТП трехблочная',
+                      },
+                      {
+                          coords: [59.927319, 30.340777],
+                          balloonContent: '2БКТП во дворе-колодце, Санкт-Петербург',
+                          text: '2БКТП во дворе-колодце',
+                      },
+                      {
+                          coords: [59.952631, 30.281944],
+                          balloonContent: 'БКРП четырехюлочная, Санкт-Петербург',
+                          text: 'БКРП четырехюлочная',
+                      },
+                      {
+                          coords: [59.942899, 30.220331],
+                          balloonContent: 'БКРП шестиблочная, Санкт-Петербург',
+                          text: 'БКРП шестиблочная',
+                      },
+                  ]
+              };
+            </script>
+            <div class="object-map__text-wrap js-map-list"></div>
+            <div class="object-map__map" id="object_map"></div>
+          </div>
+        </div>
+      </section>
       <section class="callback">
         <div class="callback__inner">
           <div class="callback__text-wrap">

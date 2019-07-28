@@ -1,2 +1,54 @@
 mixin object-map(data)
-  .object-map&attributes(attributes)
+    +el({
+        tag: 'section',
+        class: 'object-map',
+        mix: data.mix,
+        mod: data.mod,
+        js: 'object-map',
+    })&attributes(attributes)
+        .object-map__inner
+            +heading({
+                tag: 'h2',
+                text: 'Карта объектов',
+                mod: 'centred',
+            })
+            .object-map__content
+                script(src="https://api-maps.yandex.ru/2.1/?lang=ru_RU")
+                script.
+                    var pl = {
+                        style: 'islands#blueIcon',
+                        items: [
+                            {
+                                coords: [59.902180, 30.333818],
+                                balloonContent: '2БКТП, Санкт-Петербург',
+                                text: '2БКТП, Санкт-Петербург',
+                            },
+                            {
+                                coords: [60.002524, 30.247888],
+                                balloonContent: 'КТТП в Калтушай, Санкт-Петербург',
+                                text: 'КТТП в Калтушай',
+                            },
+                            {
+                                coords: [59.887125, 30.420236],
+                                balloonContent: 'БКРТП трехблочная, Санкт-Петербург',
+                                text: 'БКРТП трехблочная',
+                            },
+                            {
+                                coords: [59.927319, 30.340777],
+                                balloonContent: '2БКТП во дворе-колодце, Санкт-Петербург',
+                                text: '2БКТП во дворе-колодце',
+                            },
+                            {
+                                coords: [59.952631, 30.281944],
+                                balloonContent: 'БКРП четырехюлочная, Санкт-Петербург',
+                                text: 'БКРП четырехюлочная',
+                            },
+                            {
+                                coords: [59.942899, 30.220331],
+                                balloonContent: 'БКРП шестиблочная, Санкт-Петербург',
+                                text: 'БКРП шестиблочная',
+                            },
+                        ]
+                    };
+                .object-map__text-wrap.js-map-list
+                .object-map__map#object_map

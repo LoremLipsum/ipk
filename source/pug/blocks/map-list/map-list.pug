@@ -1,0 +1,8 @@
+mixin map-list(data)
+    +el({
+        tag: 'ol',
+        class: 'map-list',
+        mod: data.mod,
+        mix: data.mix,
+        js: data.js
+    })&attributes(attributes)
