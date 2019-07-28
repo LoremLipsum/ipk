@@ -1403,7 +1403,7 @@ textarea.field__input
     }
 }
 
-.intro
+.main-intro
 {
     position: relative;
 
@@ -1415,7 +1415,7 @@ textarea.field__input
     min-height: 360px;
     padding: 20px 0;
 
-    background-image: url('../assets/images/intro-mob.jpg'); 
+    background-image: url('../assets/images/main-intro-mob.jpg'); 
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -1427,7 +1427,7 @@ textarea.field__input
     -ms-flex-pack: center;
     justify-content: center;
 }
-.intro::after
+.main-intro::after
 {
     position: absolute;
     top: 0;
@@ -1442,7 +1442,7 @@ textarea.field__input
     background-image:    linear-gradient(180deg, rgba(0, 39, 78, 0) 0%, rgba(0, 39, 78, .6) 100%), linear-gradient(0deg, rgba(0, 39, 78, .26), rgba(0, 39, 78, .26));
 }
 
-.intro__inner
+.main-intro__inner
 {
     position: relative;
     z-index: 1;
@@ -1453,7 +1453,7 @@ textarea.field__input
 }
 @media (min-width: 768px)
 {
-    .intro__inner
+    .main-intro__inner
     {
         padding-right: 40px; 
         padding-left: 40px;
@@ -1461,7 +1461,7 @@ textarea.field__input
 }
 @media (min-width: 1400px)
 {
-    .intro__inner
+    .main-intro__inner
     {
         width: 1400px;
         margin-right: auto;
@@ -1471,7 +1471,7 @@ textarea.field__input
     }
 }
 
-.intro__list
+.main-intro__list
 {
     position: relative;
 
@@ -1480,12 +1480,12 @@ textarea.field__input
     padding: 0;
     padding-left: 15px;
 }
-.intro__list li
+.main-intro__list li
 {
     list-style-type: none;
     list-style-image: none;
 }
-.intro__list::before
+.main-intro__list::before
 {
     position: absolute;
     top: 2px;
@@ -1499,7 +1499,7 @@ textarea.field__input
     background-color: #ffc704;
 }
 
-.intro__item
+.main-intro__item
 {
     font-size: 14px;
     font-weight: 700;
@@ -1508,12 +1508,12 @@ textarea.field__input
 
     color: #fff;
 }
-.intro__item:last-child
+.main-intro__item:last-child
 {
     margin-bottom: 0;
 }
 
-.intro__button
+.main-intro__button
 {
     display: block;
 
@@ -1522,33 +1522,33 @@ textarea.field__input
 
 @media (min-width: 768px)
 {
-    .intro
+    .main-intro
     {
         min-height: 460px;
         padding: 30px 0;
 
-        background-image: url('../assets/images/intro.jpg');
+        background-image: url('../assets/images/main-intro.jpg');
     }
-    .intro__list
+    .main-intro__list
     {
         margin-bottom: 50px;
         padding-left: 25px;
     }
-    .intro__list::before
+    .main-intro__list::before
     {
         top: 6px;
         bottom: 6px;
 
         width: 5px;
     }
-    .intro__item
+    .main-intro__item
     {
         font-size: 24px; 
         font-weight: 400;
 
         margin-bottom: 12px;
     }
-    .intro__button
+    .main-intro__button
     {
         margin-left: 25px;
     }
@@ -1556,28 +1556,28 @@ textarea.field__input
 
 @media (min-width: 1024px)
 {
-    .intro
+    .main-intro
     {
         min-height: 560px;
     }
-    .intro__list
+    .main-intro__list
     {
         padding-left: 30px;
     }
-    .intro__list::before
+    .main-intro__list::before
     {
         top: 8px;
         bottom: 8px;
 
         width: 6px;
     }
-    .main-intro__item
+    .main-main-intro__item
     {
         font-size: 30px; 
 
         margin-bottom: 16px;
     }
-    .intro__button
+    .main-intro__button
     {
         margin-left: 30px;
     }
@@ -1585,30 +1585,30 @@ textarea.field__input
 
 @media (min-width: 1400px)
 {
-    .intro
+    .main-intro
     {
         min-height: 660px;
         padding: 50px 0;
     }
-    .intro__list
+    .main-intro__list
     {
         margin-bottom: 60px;
         padding-left: 40px;
     }
-    .intro__list::before
+    .main-intro__list::before
     {
         top: 10px;
         bottom: 10px;
 
         width: 8px;
     }
-    .intro__item
+    .main-intro__item
     {
         font-size: 36px; 
 
         margin-bottom: 18px;
     }
-    .intro__button
+    .main-intro__button
     {
         margin-left: 40px;
     }
@@ -2489,7 +2489,7 @@ textarea.field__input
     font-size: 12px;
     line-height: 1.6; 
 
-    margin-bottom: 25px;
+    margin-bottom: 20px;
 
     color: #fff;
 }
@@ -2625,7 +2625,7 @@ textarea.field__input
     {
         font-size: 18px; 
 
-        margin-bottom: 50px;
+        margin-bottom: 40px;
     }
     .service-intro__button
     {
