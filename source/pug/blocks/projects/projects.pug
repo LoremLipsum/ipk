@@ -1,2 +1,63 @@
 mixin projects(data)
-  .projects&attributes(attributes)
+    -
+        var projects = [
+            {
+                label: 'БКТП',
+                text1: 'ОАО РосКар',
+                text2: 'ул. Фурштадская 8',
+                image: 'projects-01.jpg',
+            },
+            {
+                label: 'БКРТП',
+                text1: 'ОАО РосКар',
+                text2: 'порт Бронка',
+                image: 'projects-02.jpg',
+            },
+            {
+                label: 'БКРТП',
+                text1: 'СПБС',
+                text2: 'ул. Жукова',
+                image: 'projects-03.jpg',
+            },
+            {
+                label: 'БКТП',
+                text1: 'ОАО РосКар',
+                text2: 'ул. Фурштадская 8',
+                image: 'projects-01.jpg',
+            },
+            {
+                label: 'БКРТП',
+                text1: 'ОАО РосКар',
+                text2: 'порт Бронка',
+                image: 'projects-02.jpg',
+            },
+            {
+                label: 'БКРТП',
+                text1: 'СПБС',
+                text2: 'ул. Жукова',
+                image: 'projects-03.jpg',
+            },
+        ]
+
+    +el({
+        tag: 'section',
+        class: 'projects',
+        mix: data.mix,
+        mod: data.mod,
+        js: data.js,
+    })&attributes(attributes)
+        .projects__inner
+            +heading({
+                tag: 'h2',
+                text: 'Проекты',
+                mod: 'centred',
+            })
+            .projects__slider.js-projects-slider
+                each item in projects
+                    .projects__slider-item
+                        +projects-card({
+                            label: item.label,
+                            text1: item.text1,
+                            text2: item.text2,
+                            image: item.image
+                        })

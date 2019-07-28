@@ -17,6 +17,7 @@
 @import "../pug/blocks/call-up/call-up";
 @import "../pug/blocks/field/field";
 @import "../pug/blocks/logo/logo";
+@import "../pug/blocks/label/label";
 @import "../pug/blocks/main-header/main-header";
 @import "../pug/blocks/main-nav/main-nav";
 @import "../pug/blocks/control/control";
@@ -31,5 +32,7 @@
 @import "../pug/blocks/features-item/features-item";
 @import "../pug/blocks/service-intro/service-intro";
 @import "../pug/blocks/project-intro/project-intro";
-
 @import "../pug/blocks/projects/projects";
+@import "../pug/blocks/projects-card/projects-card";
+
+@import "../pug/blocks/object-map/object-map";

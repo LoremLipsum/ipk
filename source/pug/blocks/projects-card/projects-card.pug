@@ -1,0 +1,30 @@
+mixin projects-card(data)
+    +el({
+        tag: 'article',
+        class: 'projects-card',
+        mix: data.mix,
+        mod: data.mod,
+        js: data.js,
+        style: 'background-image: url(assets/images/projects/' + data.image + ');',
+    })&attributes(attributes)
+        +el({
+            tag: 'a',
+            class: 'projects-card__link'
+        })
+        +label({
+            text: data.label,
+            mix: 'projects-card__label',
+        })
+        +el({
+            class: 'projects-card__text-wrap'
+        })
+            +el({
+                tag: 'p',
+                class: 'projects-card__text',
+                text: 'Заказчик: <span class="secondary-color">' + data.text1 + '</span>,'
+            })
+            +el({
+                tag: 'p',
+                class: 'projects-card__text',
+                text: 'Локация: <span class="secondary-color">' + data.text2 + '</span>,'
+            })

@@ -1,3 +1,64 @@
 .projects {
-  
+
+}
+
+.projects__inner {
+  @include inner;
+}
+
+.projects__content {
+  overflow: hidden;
+}
+
+.projects__slider {
+  position: relative;
+  margin-bottom: -20px;
+
+  .slick-list {
+    position: relative;
+    margin-right: -20px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 20px;
+      height: calc(100% - 20px);
+      background-color: color(white);
+    }
+  }
+
+  .slick-slide {
+    margin-right: 20px;
+  }
+}
+
+.projects__slider-item {
+  margin-bottom: 20px;
+}
+
+.projects__prev,
+.projects__next {
+  position: absolute;
+  top: 50%;
+  transform: translate3d(0, -50%, 0);
+}
+
+.projects__prev {
+  left: -40px;
+}
+
+.projects__next {
+  right: -40px;
+}
+
+@include respond-to(large) {
+  .projects__prev {
+    left: -80px;
+  }
+
+  .projects__next {
+    right: -80px;
+  }
 }

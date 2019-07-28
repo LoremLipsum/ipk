@@ -1,2 +1,13 @@
 mixin control(data)
-  .control&attributes(attributes)
+    +el({
+       tag: data.tag,
+       class: 'control',
+       mix: data.mix,
+       mod: data.mod,
+       js: data.js,
+       title: data.title,
+       target: data.target,
+       href: data.href,
+       text: data.text,
+       position: data.position,
+    })&attributes(attributes)

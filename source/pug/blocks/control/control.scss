@@ -1,3 +1,52 @@
 .control {
-  
+  position: relative;
+  display: inline-block;
+  color: inherit;
+  width: 30px;
+  height: 50px;
+  padding: 5px;
+  border: none;
+  background-color: #000000;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 10px;
+    height: 10px;
+    margin-top: -5px;
+    margin-left: -5px;
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23ffffff' viewBox='0 0 8 10'%3E%3Cpolygon points='1.5 10 0.2 8.4 4.4 4.9 0.2 1.6 1.5 0 7.8 4.8 '/%3E%3C/svg%3E");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-decoration: none;
+  }
+
+  &--prev {
+    &::after {
+      transform: rotate(180deg);
+    }
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: color(secondary);
+  }
+}
+
+@include respond-to(large) {
+  .control {
+    width: 40px;
+    height: 60px;
+
+    &::after {
+      width: 16px;
+      height: 16px;
+      margin-top: -8px;
+      margin-left: -8px;
+    }
+  }
 }

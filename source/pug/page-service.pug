@@ -7,7 +7,10 @@ block vars
 block content
     main.main-content.main-content--padding-top
         +service-intro({
-
+            mix: 'main-content__service-intro',
+        })
+        +projects({
+            mix: 'main-content__projects',
         })
         +callback({
         })

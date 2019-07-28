@@ -14,12 +14,11 @@
   align-items: center;
   height: 290px;
   padding: 20px;
-
-  @include mask(rgba(color(primary), 0.1))
-
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+
+  @include mask(rgba(color(primary), 0.1))
 }
 
 .services-card__button {
