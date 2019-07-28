@@ -12,12 +12,14 @@
 .main-content__about,
 .main-content__features,
 .main-content__service-intro,
-.main-content__projects {
+.main-content__projects,
+.main-content__project-intro {
   margin-bottom: 25px;
 }
 
 .main-content__services,
-.main-content__object-map {
+.main-content__object-map,
+.main-content__gallery {
   margin-bottom: 30px;
 }
 
@@ -32,12 +34,14 @@
   .main-content__about,
   .main-content__features,
   .main-content__service-intro,
-  .main-content__projects {
+  .main-content__projects,
+  .main-content__project-intro {
     margin-bottom: 35px;
   }
 
   .main-content__services,
-  .main-content__object-map {
+  .main-content__object-map,
+  .main-content__gallery {
     margin-bottom: 40px;
   }
 }
@@ -53,12 +57,14 @@
   .main-content__about,
   .main-content__features,
   .main-content__service-intro,
-  .main-content__projects {
+  .main-content__projects,
+  .main-content__project-intro {
     margin-bottom: 45px;
   }
 
   .main-content__services,
-  .main-content__object-map {
+  .main-content__object-map,
+  .main-content__gallery {
     margin-bottom: 80px;
   }
 }

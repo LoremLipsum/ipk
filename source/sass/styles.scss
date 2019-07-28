@@ -11,6 +11,7 @@
 @import "./blocks/main-content";
 @import "../pug/blocks/button/button";
 @import "../pug/blocks/button-nav/button-nav";
+@import "../pug/blocks/dots/dots";
 @import "../pug/blocks/button-icon/button-icon";
 @import "../pug/blocks/button-close/button-close";
 @import "../pug/blocks/button-up/button-up";
@@ -23,7 +24,8 @@
 @import "../pug/blocks/control/control";
 @import "../pug/blocks/main-footer/main-footer";
 @import "../pug/blocks/main-intro/main-intro";
-@import "../pug/blocks/heading/heading";
+@import "../pug/blocks/heading-lvl-1/heading-lvl-1";
+@import "../pug/blocks/heading-lvl-2/heading-lvl-2";
 @import "../pug/blocks/about/about";
 @import "../pug/blocks/features/features";
 @import "../pug/blocks/callback/callback";
@@ -34,6 +36,10 @@
 @import "../pug/blocks/project-intro/project-intro";
 @import "../pug/blocks/projects/projects";
 @import "../pug/blocks/projects-card/projects-card";
-
 @import "../pug/blocks/object-map/object-map";
 @import "../pug/blocks/map-list/map-list";
+
+@import "../pug/blocks/gallery/gallery";
+
+@import "../pug/blocks/modal/modal";
+@import "../pug/blocks/overlay/overlay";

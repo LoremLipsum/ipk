@@ -37,6 +37,7 @@ const config = {
     libStyles     : [
                       './node_modules/normalize.scss/normalize.scss',
                       './node_modules/slick-carousel/slick/slick.scss',
+                      './source/sass/libs/jquery.fancybox.scss',
                     ],
     zip           : destPath + '/**/*.*',
   },

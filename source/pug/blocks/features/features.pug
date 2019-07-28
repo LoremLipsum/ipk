@@ -26,10 +26,10 @@ mixin features(data)
         js: data.js,
     })&attributes(attributes)
         .features__inner
-            +heading({
+            +heading-lvl-2({
                 tag: 'h2',
                 text: 'Преимущества',
-                mod: 'centred',
+                mod: ['centred'],
             })
         .features__content
             .features__inner

@@ -1,2 +1,39 @@
 mixin project-intro(data)
-  .project-intro&attributes(attributes)
+    +el({
+        tag: 'section',
+        class: 'project-intro',
+        mix: data.mix,
+        mod: data.mod,
+        js: data.js,
+    })&attributes(attributes)
+        .project-intro__inner
+            +heading-lvl-1({
+                tag: 'h1',
+                text: 'Установка БКТП',
+            })
+            .project-intro__content
+                .project-intro__column
+                    section.project-intro__section.project-intro__section--descr
+                        +heading-lvl-2({
+                            tag: 'h2',
+                            text: 'Описание',
+                        })
+                        p.project-intro__text
+                            | Построена для жилого комплекса&quot;5&nbsp;звезд&quot;. Редкая конфигурация&nbsp;&mdash; Трехблочная.
+                    section.project-intro__section
+                        +heading-lvl-2({
+                            tag: 'h2',
+                            text: 'Сведения',
+                        })
+                        ul.project-intro__list
+                            li.project-intro__item <span class="project-intro__name">Заказчик:</span> ОАО РосКар
+                            li.project-intro__item <span class="project-intro__name">Локация:</span> ул. Фурштадская 8
+                .project-intro__column.js-project-map
+                    script(src="https://api-maps.yandex.ru/2.1/?lang=ru_RU")
+                    script.
+                        var projectMapData = {
+                          coords: [59.939095, 30.315868],
+                          balloonContent: 'г. Санкт-Петербург',
+                          zoom: 16,
+                        };
+                    .project-intro__map#project_map

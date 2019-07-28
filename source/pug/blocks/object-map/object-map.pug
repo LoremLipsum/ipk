@@ -7,7 +7,7 @@ mixin object-map(data)
         js: 'object-map',
     })&attributes(attributes)
         .object-map__inner
-            +heading({
+            +heading-lvl-2({
                 tag: 'h2',
                 text: 'Карта объектов',
                 mod: 'centred',
@@ -15,7 +15,7 @@ mixin object-map(data)
             .object-map__content
                 script(src="https://api-maps.yandex.ru/2.1/?lang=ru_RU")
                 script.
-                    var pl = {
+                    var projectMapData = {
                         style: 'islands#blueIcon',
                         items: [
                             {

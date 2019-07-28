@@ -20,7 +20,7 @@ jQuery(function($){
           var roadcontrolState = map.controls.get('zoomControl').state.get('size');
           map.controls.get('zoomControl').options.set('size', 'small');
 
-          var collection = new ymaps.GeoObjectCollection(null, { preset: pl.style });
+          var collection = new ymaps.GeoObjectCollection(null, { preset: projectMapData.style });
 
           map.geoObjects.add(collection);
 
@@ -47,8 +47,8 @@ jQuery(function($){
               });
           }
 
-          for (var i = 0; i < pl.items.length; i += 1) {
-            createMenu(pl.items[i])
+          for (var i = 0; i < projectMapData.items.length; i += 1) {
+            createMenu(projectMapData.items[i])
           }
 
           menu.appendTo($('.js-map-list'));

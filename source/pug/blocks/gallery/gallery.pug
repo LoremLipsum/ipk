@@ -1,0 +1,57 @@
+mixin gallery(data)
+    -
+        var gallery = [
+            {
+                image: 'gallery-01.jpg',
+                imageSmall: 'gallery-01-small.jpg',
+            },
+            {
+                image: 'gallery-02.jpg',
+                imageSmall: 'gallery-02-small.jpg',
+            },
+            {
+                image: 'gallery-03.jpg',
+                imageSmall: 'gallery-03-small.jpg',
+            },
+            {
+                image: 'gallery-04.jpg',
+                imageSmall: 'gallery-04-small.jpg',
+            },
+            {
+                image: 'gallery-05.jpg',
+                imageSmall: 'gallery-05-small.jpg',
+            },
+            {
+                image: 'gallery-06.jpg',
+                imageSmall: 'gallery-06-small.jpg',
+            },
+        ]
+
+    +el({
+        tag: 'section',
+        class: 'gallery',
+        mix: data.mix,
+        mod: data.mod,
+        js: data.js,
+    })&attributes(attributes)
+        .gallery__inner
+            +heading-lvl-2({
+                tag: 'h2',
+                text: 'Галерея',
+                mod: ['centred'],
+            })
+            .gallery__content
+                .gallery__list.js-gallery-slider
+                    each item in gallery
+                        .gallery__item
+                            +el({
+                                tag: 'a',
+                                class: 'gallery__image-wrap',
+                                js: 'fancybox',
+                                href: 'assets/images/gallery/' + item.image
+                            })
+                                +el({
+                                    tag: 'img',
+                                    image: 'gallery/' + item.imageSmall,
+                                    class: 'gallery__image',
+                                })

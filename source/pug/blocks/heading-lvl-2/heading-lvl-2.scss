@@ -1,4 +1,4 @@
-.heading {
+.heading-lvl-2 {
   position: relative;
   margin: 0;
   margin-bottom: 20px;
@@ -29,13 +29,13 @@
 }
 
 @include respond-to(medium) {
-  .heading {
+  .heading-lvl-2 {
     margin-bottom: 30px;
   }
 }
 
 @include respond-to(large) {
-  .heading {
+  .heading-lvl-2 {
     padding-bottom: 15px;
     font-size: 24px;
 
