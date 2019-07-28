@@ -1,4 +1,4 @@
-.intro {
+.main-intro {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -8,7 +8,7 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  background-image: url("../assets/images/intro-mob.jpg");
+  background-image: url("../assets/images/main-intro-mob.jpg");
 
   &::after {
     content: "";
@@ -21,14 +21,14 @@
   }
 }
 
-.intro__inner {
+.main-intro__inner {
   position: relative;
   z-index: 1;
   height: 100%;
   @include inner;
 }
 
-.intro__list {
+.main-intro__list {
   position: relative;
   @include ul-no;
   margin-bottom: 50px;
@@ -45,7 +45,7 @@
   }
 }
 
-.intro__item {
+.main-intro__item {
   margin-bottom: 7px;
   font-weight: 700;
   font-size: 14px;
@@ -56,19 +56,19 @@
   }
 }
 
-.intro__button {
+.main-intro__button {
   display: block;
   margin: 0 auto;
 }
 
 @include respond-to(medium) {
-  .intro {
+  .main-intro {
     min-height: 460px;
     padding: 30px 0;
-    background-image: url("../assets/images/intro.jpg");
+    background-image: url("../assets/images/main-intro.jpg");
   }
 
-  .intro__list {
+  .main-intro__list {
     margin-bottom: 50px;
     padding-left: 25px;
 
@@ -79,23 +79,23 @@
     }
   }
 
-  .intro__item {
+  .main-intro__item {
     margin-bottom: 12px;
     font-weight: 400;
     font-size: 24px;
   }
 
-  .intro__button {
+  .main-intro__button {
     margin-left: 25px;
   }
 }
 
 @include respond-to(medium-lg) {
-  .intro {
+  .main-intro {
     min-height: 560px;
   }
 
-  .intro__list {
+  .main-intro__list {
     padding-left: 30px;
 
     &::before {
@@ -105,23 +105,23 @@
     }
   }
 
-  .main-intro__item {
+  .main-main-intro__item {
     margin-bottom: 16px;
     font-size: 30px;
   }
 
-  .intro__button {
+  .main-intro__button {
     margin-left: 30px;
   }
 }
 
 @include respond-to(large) {
-  .intro {
+  .main-intro {
     min-height: 660px;
     padding: 50px 0;
   }
 
-  .intro__list {
+  .main-intro__list {
     margin-bottom: 60px;
     padding-left: 40px;
 
@@ -132,12 +132,12 @@
     }
   }
 
-  .intro__item {
+  .main-intro__item {
     margin-bottom: 18px;
     font-size: 36px;
   }
 
-  .intro__button {
+  .main-intro__button {
     margin-left: 40px;
   }
 }
