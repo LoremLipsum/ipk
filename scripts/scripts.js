@@ -1,9 +1,70 @@
 jQuery(function($){
+  $('.js-fancybox').fancybox();
+});
+
+jQuery(function($){
   var $feildTel = $('input[type="tel"]');
 
   if($feildTel.length) {
     $feildTel.mask("+7 (999) 999-99-99");
   }
+});
+
+jQuery(function($){
+
+  var gallerySLider = $('.js-gallery-slider');
+
+  if(gallerySLider.length) {
+    var destroy = true;
+
+    function slideDetect() {
+      if (document.documentElement.clientWidth > 767 && !destroy) {
+         gallerySLider.slick('unslick');
+         destroy = true;
+      } else if (document.documentElement.clientWidth < 767 && destroy) {
+         gallerySLider.slick({
+          infinite: true,
+          arrows: false,
+          slidesPerRow: 1,
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          swipeToSlide: true,
+          infinite: true,
+          dots: true,
+          dotsClass: 'gallery__dots dots',
+          responsive: [
+            {
+              breakpoint: 767,
+              settings: {
+                slidesToShow: 3,
+             }
+            },
+            {
+              breakpoint: 600,
+              settings: {
+                slidesToShow: 2,
+              }
+            },
+            {
+              breakpoint: 480,
+              settings: {
+                slidesToShow: 1,
+              }
+            }
+          ]
+        });
+
+        destroy = false;
+      }
+    }
+
+    slideDetect();
+
+    $(window).resize(function() {
+       slideDetect()
+    });
+  }
+
 });
 
 jQuery(function($){
@@ -53,7 +114,7 @@ jQuery(function($){
           var roadcontrolState = map.controls.get('zoomControl').state.get('size');
           map.controls.get('zoomControl').options.set('size', 'small');
 
-          var collection = new ymaps.GeoObjectCollection(null, { preset: pl.style });
+          var collection = new ymaps.GeoObjectCollection(null, { preset: projectMapData.style });
 
           map.geoObjects.add(collection);
 
@@ -80,8 +141,8 @@ jQuery(function($){
               });
           }
 
-          for (var i = 0; i < pl.items.length; i += 1) {
-            createMenu(pl.items[i])
+          for (var i = 0; i < projectMapData.items.length; i += 1) {
+            createMenu(projectMapData.items[i])
           }
 
           menu.appendTo($('.js-map-list'));
@@ -90,6 +151,34 @@ jQuery(function($){
         });
       }
     }
+});
+
+jQuery(function($){
+  var projectMap = $('.js-project-map');
+
+  if(projectMap.length) {
+    ymaps.ready(function () {
+        var map = new ymaps.Map('project_map', {
+          center: projectMapData.coords,
+          zoom: projectMapData.zoom,
+          scrollZoom: false,
+          controls: []
+        }, {
+          searchControlProvider: 'yandex#search'
+        }),
+        Placemark = new ymaps.Placemark(projectMapData.coords, {
+          balloonContent: projectMapData.balloonContent
+        }, {
+          preset: 'islands#blueIcon'
+        });
+
+        map.geoObjects.add(Placemark);
+        map.behaviors.disable('scrollZoom');
+        map.controls.add('zoomControl');
+        var roadcontrolState = map.controls.get('zoomControl').state.get('size');
+        map.controls.get('zoomControl').options.set('size', 'small');
+      });
+  }
 });
 
 jQuery(function($){
