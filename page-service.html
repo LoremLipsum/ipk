@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <title>title</title>
+    <meta name="description" content="description">
+    <meta name="keywords" content="keywords">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="format-detection" content="address=no">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,500,400,700&amp;display=swap&amp;subset=cyrillic" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/libs.min.css">
+    <link rel="stylesheet" href="./styles/styles.min.css">
+  </head>
+  <body>
+    <header class="main-header js-header">
+      <div class="main-header__top">
+        <div class="main-header__inner">
+          <div class="main-header__left">
+            <button class="button-nav main-header__button-nav js-main-nav-btn" aria-label="Открыть меню" type="button">
+              <span class="button-nav__icon">
+                <span class="button-nav__lines">
+                </span>
+              </span>
+            </button>
+          </div>
+          <a class="logo main-header__logo" title="Перейти на главную страницу" href="main.html">ИП Казанцев А.В.
+          </a>
+          <div class="main-header__right">
+            <button class="button-icon main-header__button-phone" type="button">
+              <img class="button-icon__icon" src="./assets/images/phone.svg" alt=" ">
+            </button>
+            <div class="call-up main-header__call-up">
+              <span class="call-up__text">Консультация специалиста
+              </span>
+              <a class="call-up__link" href="tel:+74954545555">+7(495) 454 5555
+              </a>
+            </div>
+            <button class="button button--bg-secondary main-header__btn-call-up" type="button">Заказать звонок
+            </button>
+          </div>
+        </div>
+      </div>
+      <nav class="main-header__panel js-main-nav-panel" aria-label="Основное меню" itemscope itemtype="http://schema.org/SiteNavigationElement">
+        <div class="main-header__inner">
+          <ul class="main-nav main-header__main-nav">
+            <li class="main-nav__item active" itemprop="name">
+              <a class="main-nav__link" href="#nohere" itemprop="url">Главная
+              </a>
+            </li>
+            <li class="main-nav__item" itemprop="name">
+              <a class="main-nav__link" href="#nohere" itemprop="url">Обо мне
+              </a>
+            </li>
+            <li class="main-nav__item" itemprop="name">
+              <a class="main-nav__link" href="#nohere" itemprop="url">Установка БКТП
+              </a>
+            </li>
+            <li class="main-nav__item" itemprop="name">
+              <a class="main-nav__link" href="#nohere" itemprop="url">Реконструкция ГРЩ
+              </a>
+            </li>
+            <li class="main-nav__item" itemprop="name">
+              <a class="main-nav__link" href="#nohere" itemprop="url">Прокладка линий НН И ВН
+              </a>
+            </li>
+            <li class="main-nav__item" itemprop="name">
+              <a class="main-nav__link" href="#nohere" itemprop="url">Контакты
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main class="main-content main-content--padding-top">
+      <div class="service-intro">
+        <div class="service-intro__inner">
+          <h1 class="heading heading--centred">Установка БКТП, БКРТП, КТПН
+          </h1>
+        </div>
+        <div class="service-intro__content">
+          <div class="service-intro__content-inner">
+            <div class="service-intro__image-wrap">
+              <img class="service-intro__image" src="./assets/images/service-intro.jpg" alt=" " srcset="assets/images/service-intro@2x.jpg 2x">
+            </div>
+            <div class="service-intro__text-wrap">
+              <div class="service-intro__text">
+                <p>
+                  Строительство и&nbsp;установка БКТП (БКРТП, КТПН), начиная с&nbsp;котлована и&nbsp;до&nbsp;включения трансформатора на&nbsp;холостой ход.
+                  Возможность выполнения работ вашей рабочей силой или бригадой из&nbsp;4-5 человек без требований к&nbsp;квалификации.
+                  Экспертная оценка имеющейся проектной документации, внесение необходимых правок, при необходимости&nbsp;&mdash; обучение команды заказчика.
+                </p>
+              </div>
+              <div class="service-intro__button-wrap">
+                <button class="button button--border-white service-intro__button" type="button">Отправить заявку
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <section class="callback">
+        <div class="callback__inner">
+          <div class="callback__text-wrap">
+            <h2 class="callback__heading">Заказать звонок</h2>
+            <p class="callback__text">Вы&nbsp;можете оставить номер и&nbsp;я&nbsp;перезвоню вам в&nbsp;ближайшее&nbsp;время</p>
+          </div>
+          <form class="callback__form" action="/" method="post" accept-charset="UTF-8">
+            <div class="callback__field-group">
+              <label class="field callback__field">
+                <input class="field__input" tabindex="0" placeholder="+7 (___) ___-__-__ " type="tel">
+              </label>
+              <button class="button button--large callback__submit" type="submit">Отправить
+              </button>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+    <footer class="main-footer">
+      <div class="main-footer__main">
+        <div class="main-footer__inner">
+          <ul class="main-footer__nav-list" aria-label="Дополнительное меню" role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
+            <li class="main-footer__nav-item active" itemprop="name">
+              <a class="main-footer__nav-link" href="#nohere" itemprop="url">Главная
+              </a>
+            </li>
+            <li class="main-footer__nav-item" itemprop="name">
+              <a class="main-footer__nav-link" href="#nohere" itemprop="url">Обо мне
+              </a>
+            </li>
+            <li class="main-footer__nav-item" itemprop="name">
+              <a class="main-footer__nav-link" href="#nohere" itemprop="url">Установка БКТП
+              </a>
+            </li>
+            <li class="main-footer__nav-item" itemprop="name">
+              <a class="main-footer__nav-link" href="#nohere" itemprop="url">Реконструкция ГРЩ
+              </a>
+            </li>
+            <li class="main-footer__nav-item" itemprop="name">
+              <a class="main-footer__nav-link" href="#nohere" itemprop="url">Прокладка линий НН И ВН
+              </a>
+            </li>
+            <li class="main-footer__nav-item" itemprop="name">
+              <a class="main-footer__nav-link" href="#nohere" itemprop="url">Контакты
+              </a>
+            </li>
+          </ul>
+          <ul class="main-footer__contacts-list">
+            <li class="main-footer__contacts-item">
+              <a class="main-footer__contacts-link main-footer__contacts-link--tel" href="tel:+74954545555">Тел: +7(495) 454 5555
+              </a>
+            </li>
+            <li class="main-footer__contacts-item">
+              <a class="main-footer__contacts-link main-footer__contacts-link--email" href="mailto:mail@gmail.com">Email: mail@gmail.com
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="main-footer__bottom">
+        <div class="main-footer__inner">
+          <div class="main-footer__copyright">&copy;&nbsp;2019 allright.ru. Все права защищены</div>
+        </div>
+      </div>
+    </footer>
+    <script src="./scripts/libs.min.js"></script>
+    <script src="./scripts/scripts.min.js"></script>
+  </body>
+</html>
