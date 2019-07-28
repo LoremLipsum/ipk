@@ -17,7 +17,7 @@ main {
     flex-shrink: 0;
   }
 
-  > *:last-child {
+  > *.callback {
     margin-top: auto;
   }
 }
