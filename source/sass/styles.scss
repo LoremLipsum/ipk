@@ -1,7 +1,3 @@
-@import "./libs/normalize";
-@import "./libs/swiper";
-@import "./libs/jquery.fancybox";
-@import "./libs/nanoscroller";
 @import "./global/vars";
 @import "./global/functions";
 @import "./global/mixins/mixins";
@@ -12,7 +8,7 @@
 @import "./blocks/sticky-footer";
 @import "./blocks/bullet";
 @import "./blocks/nano";
-
+@import "./blocks/main-content";
 @import "../pug/blocks/button/button";
 @import "../pug/blocks/button-nav/button-nav";
 @import "../pug/blocks/button-icon/button-icon";
@@ -23,6 +19,15 @@
 @import "../pug/blocks/logo/logo";
 @import "../pug/blocks/main-header/main-header";
 @import "../pug/blocks/main-nav/main-nav";
-
 @import "../pug/blocks/control/control";
 @import "../pug/blocks/main-footer/main-footer";
+@import "../pug/blocks/main-intro/main-intro";
+@import "../pug/blocks/heading/heading";
+@import "../pug/blocks/about/about";
+@import "../pug/blocks/features/features";
+@import "../pug/blocks/callback/callback";
+@import "../pug/blocks/services/services";
+@import "../pug/blocks/services-card/services-card";
+@import "../pug/blocks/features-item/features-item";
+@import "../pug/blocks/service-intro/service-intro";
+@import "../pug/blocks/project-intro/project-intro";

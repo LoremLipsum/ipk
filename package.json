@@ -69,6 +69,7 @@
     "install": "^0.12.2",
     "jquery": "^3.3.1",
     "jquery-match-height": "^0.7.2",
+    "jquery.maskedinput": "^1.4.1",
     "nanoscroller": "^0.8.7",
     "normalize.css": "^8.0.1",
     "npm": "^6.9.0",

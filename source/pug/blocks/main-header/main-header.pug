@@ -6,29 +6,32 @@ mixin main-header(data)
         mod: data.mod,
         js: 'header',
     })&attributes(attributes)
-        .main-header__wrapper
-            .main-header__left
-                +button-nav({
-                    mix: 'main-header__button-nav',
-                    js: 'button-nav',
+        .main-header__top
+            .main-header__inner
+                .main-header__left
+                    +button-nav({
+                        mix: 'main-header__button-nav',
+                        js: 'main-nav-btn',
+                    })
+                +logo({
+                    mix: 'main-header__logo',
                 })
-            +logo({
-                mix: 'main-header__logo',
-            })
-            .main-header__right
-                +button-icon({
-                    mix: 'main-header__button-phone',
-                })
-                +call-up({
-                    mix: 'main-header__call-up'
-                })
+                .main-header__right
+                    +button-icon({
+                        mix: 'main-header__button-phone',
+                        icon: 'phone.svg'
+                    })
+                    +call-up({
+                        mix: 'main-header__call-up'
+                    })
+                    +button({
+                        text: 'Заказать звонок',
+                        mod: ['bg-secondary'],
+                        mix: 'main-header__btn-call-up',
+                    })
         nav.main-header__panel.js-main-nav-panel(aria-label='Основное меню' itemscope itemtype='http://schema.org/SiteNavigationElement')
-            .main-header__main-nav-wrapper
+            .main-header__inner
                 +main-nav({
                     mix: 'main-header__main-nav',
-                    items: [
-                        {
-
-                        }
-                    ],
+                    items: ['Главная', 'Обо мне', 'Установка БКТП', 'Реконструкция ГРЩ', 'Прокладка линий НН И ВН', 'Контакты']
                 })

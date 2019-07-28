@@ -16,12 +16,12 @@ module.exports = () => (
     .pipe($.autoprefixer(AUTOPREFIXER_BROWSERS))
     .pipe($.csscomb())
     .pipe(gulp.dest(config.dest.css))
-    // .pipe($.csso({
-    //   restructure: false,
-    //   sourceMap: true,
-    //   debug: true,
-    // }))
-    // .pipe($.rename({ suffix: '.min' }))
-    // .pipe(gulp.dest(config.dest.css))
+    .pipe($.csso({
+      restructure: false,
+      sourceMap: true,
+      debug: true,
+    }))
+    .pipe($.rename({ suffix: '.min' }))
+    .pipe(gulp.dest(config.dest.css))
     .pipe(browserSync.stream())
 );

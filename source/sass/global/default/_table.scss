@@ -9,7 +9,7 @@ th,
 td {
   padding: 12px;
   border: none;
-  border-bottom: 2px solid color(light);
+  border-bottom: 2px solid color(border);
   text-align: center;
 
   > *:first-child {
@@ -31,18 +31,11 @@ th {
   text-align: center;
 }
 
-td {
-
-}
 
 @include respond-to(medium) {
   th,
   td {
     padding: 16px;
-  }
-
-  th {
-    font-size: get($fs, medium, size-28);
   }
 }
 
@@ -50,9 +43,5 @@ td {
   th,
   td {
     padding: 20px;
-  }
-
-  th {
-    font-size: get($fs, large, size-28);
   }
 }

@@ -1,7 +1,7 @@
 $button-nav-width: 36px;
 $button-nav-height: 36px;
-$button-nav-distanse: 6px;
-$button-nav-thickness: 2px;
+$button-nav-distanse: 8px;
+$button-nav-thickness: 3px;
 $button-nav-color: color(secondary);
 $button-nav-color-active: color(black);
 
@@ -9,7 +9,8 @@ $button-nav-color-active: color(black);
   width: $button-nav-width;
   height: $button-nav-height;
   padding: 6px;
-  border-radius: 50%;
+  background-color: transparent;
+  border: none;
 }
 
 .button-nav__icon {

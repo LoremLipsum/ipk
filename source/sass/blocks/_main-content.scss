@@ -1,0 +1,33 @@
+.main-content__intro,
+.main-content__about,
+.main-content__features {
+  margin-bottom: 25px;
+}
+
+.main-content__services {
+  margin-bottom: 30px;
+}
+
+@include respond-to(medium) {
+  .main-content__intro,
+  .main-content__about,
+  .main-content__features {
+    margin-bottom: 35px;
+  }
+
+  .main-content__services {
+    margin-bottom: 40px;
+  }
+}
+
+@include respond-to(large) {
+  .main-content__intro,
+  .main-content__about,
+  .main-content__features {
+    margin-bottom: 45px;
+  }
+
+  .main-content__services {
+    margin-bottom: 80px;
+  }
+}

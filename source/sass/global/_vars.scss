@@ -5,31 +5,34 @@ $fonts: (
 $widths: (
   small: 320px,
   medium: 768px,
+  medium-lg: 1024px,
   large: 1400px,
 );
 
 $pads: (
   small: 20px,
   medium: 40px,
+  medium-lg: 80px,
   large: 80px,
+  large-lg: 160px,
 );
 
 $colors: (
-  primary: #00274E,
-  secondary: #FFC704,
-  light: #FAF7F7,
+  primary: #00274e,
+  secondary: #ffc704,
+  light: #faf7f7,
   black: #777373,
   white: #fff,
   gray: #ccc,
   error: #d0021b,
   disabled: #c9c9c6,
-  border: #DFDDDD,
+  border: #dfdddd,
 );
 
 // время анимаций
 $durations: (
-  norm: 0.3s,
-  long: 0.6s,
+  md: 0.3s,
+  lg: 0.6s,
 );
 
 $func: (

@@ -1,0 +1,21 @@
+.services__inner {
+  @include inner-md;
+}
+
+.services__list {
+  @include ul-no;
+}
+
+@include respond-to(medium) {
+  .services__list {
+    display: flex;
+    margin-bottom: -20px;
+    margin-right: -20px;
+  }
+
+  .services__item {
+    width: 33.33%;
+    padding-right: 20px;
+    margin-bottom: 20px;
+  }
+}

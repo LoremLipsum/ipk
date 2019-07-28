@@ -1,0 +1,22 @@
+mixin services-card(data)
+    +el({
+        tag: 'article',
+        class: 'services-card',
+        mix: data.mix,
+        mod: data.mod,
+        js: data.js,
+    })&attributes(attributes)
+        +el({
+            class: 'services-card__top',
+            text: data.heading,
+        })
+        +el({
+            class: 'services-card__content',
+            style: 'background-image: url(assets/images/services/' + data.image + ');',
+        })
+            +button({
+                tag: 'a',
+                mix: 'services-card__button',
+                mod: ['arrow', 'large '],
+                text: 'Перейти',
+            })

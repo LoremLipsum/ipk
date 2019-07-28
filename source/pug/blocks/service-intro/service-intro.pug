@@ -1,0 +1,19 @@
+mixin service-intro(data)
+    +el({
+        class: 'service-intro',
+        mix: data.mix,
+        mod: data.mod,
+        js: data.js,
+    })&attributes(attributes)
+        .service-intro__inner
+            .service-intro__image-wrap
+                +el({
+                    tag: 'img',
+                    class: 'service-intro__image',
+                    image: 'service-intro'
+                })(srcset="assets/images/service-intro@2x.jpg 2x")
+            .service-intro__content
+                p.
+                    Строительство и&nbsp;установка БКТП (БКРТП, КТПН), начиная с&nbsp;котлована и&nbsp;до&nbsp;включения трансформатора на&nbsp;холостой ход.
+                    Возможность выполнения работ вашей рабочей силой или бригадой из&nbsp;4-5 человек без требований к&nbsp;квалификации.
+                    Экспертная оценка имеющейся проектной документации, внесение необходимых правок, при необходимости&nbsp;&mdash; обучение команды заказчика.

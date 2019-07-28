@@ -16,7 +16,7 @@ mixin el(data)
         - elMods += ' ' + data.class + '--' + data.mod
     //- href по умолчанию '#'
     if data.tag == 'a'
-        - elAttr = data.href ? {href: data.href} : {href: 'javascript:void(0)'}
+        - elAttr = data.href ? {href: data.href} : {href: '#nohere'}
     //- если ссылка без href
     if data.href == 'none'
         - elAttr = ''

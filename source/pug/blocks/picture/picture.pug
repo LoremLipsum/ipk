@@ -1,0 +1,11 @@
+mixin picture(data)
+    - path = data.path ? data.path + '/' : ''
+    +el({
+        tag: 'picture',
+        class: data.class,
+        mix: data.mix,
+        mod: data.mod,
+        js: data.js,
+    })
+        source(srcset='assets/images/' + path + data.image + '@1x.webp 1x, assets/images/' + path + data.image + '@2x.webp 2x' type='image/webp')
+        img(src='assets/images/' + path + data.image + '@1x.' + data.exp srcset='assets/images/' + path + data.image + '@2x.' + data.exp + ' 2x' alt=data.alt ? data.alt : '' )

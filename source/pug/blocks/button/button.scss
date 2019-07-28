@@ -2,23 +2,27 @@
   display: inline-block;
   padding: 6px 8px;
   border: none;
-  background-color: color(primary)
+  background-color: color(primary);
   color: color(white);
   font-weight: 500;
   font-size: 12px;
   line-height: 14px;
-  letter-spacing: 0.02em;
   text-align: center;
   text-transform: uppercase;
+  text-decoration: none;
+
+  @include hover {
+    color: rgba(color(white), 0.5);
+  }
 
   &--large {
-    padding: 6px 16px;
-    font-size: 18px;
-    line-height: 22px;
+    padding: 14px 20px;
+    font-size: 14px;
+    line-height: 18px;
     letter-spacing: 0.05em;
   }
 
-  &--secondary {
+  &--bg-secondary {
     background-color: color(secondary);
   }
 
@@ -36,19 +40,28 @@
     &::after {
       content: "";
       position: absolute;
-      width: 10px;
-      height: 10px;
-      background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='10' viewBox='0 0 8 10'%3E%3Cpath d='M1 1L6 4.9 1 9' style='stroke-width:2;stroke:%23FFC704'/%3E%3C/svg%3E");
+      top: 50%;
+      right: 20px;
+      width: 8px;
+      height: 8px;
+      margin-top: -4px;
+      background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23ffc704' viewBox='0 0 8 10'%3E%3Cpolygon points='1.5 10 0.2 8.4 4.4 4.9 0.2 1.6 1.5 0 7.8 4.8 '/%3E%3C/svg%3E");
       background-repeat: no-repeat;
       background-position: center;
       background-size: contain;
+    }
+
+    @include hover {
+      &::after {
+        opacity: 0.5;
+      }
     }
   }
 }
 
 .button--secondary.button--arrow {
   &::after {
-    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='10' viewBox='0 0 8 10'%3E%3Cpath d='M1 1L6 4.9 1 9' style='stroke-width:2;stroke:%2300274E'/%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%2300274e' viewBox='0 0 8 10'%3E%3Cpolygon points='1.5 10 0.2 8.4 4.4 4.9 0.2 1.6 1.5 0 7.8 4.8 '/%3E%3C/svg%3E");
   }
 }
 
@@ -65,12 +78,14 @@
     }
 
     &--arrow {
-      padding-left: 50px;
-      padding-right: 50px;
+      padding-left: 40px;
+      padding-right: 40px;
 
       &::after {
+        right: 25px;
         width: 10px;
         height: 10px;
+        margin-top: -5px;
       }
     }
   }

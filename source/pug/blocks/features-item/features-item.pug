@@ -1,0 +1,9 @@
+mixin features-item(data)
+    +el({
+        tag: data.tag,
+        class: 'features-item',
+        mix: data.mix,
+        mod: data.mod,
+        js: data.js,
+        text: data.text,
+    })&attributes(attributes)

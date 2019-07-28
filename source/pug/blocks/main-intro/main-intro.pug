@@ -1,0 +1,19 @@
+mixin main-intro(data)
+    +el({
+        class: 'main-intro',
+        mix: data.mix,
+        mod: data.mod,
+        js: data.js,
+    })&attributes(attributes)
+        .main-intro__inner
+            ul.main-intro__list
+                li.main-intro__item Строительство и монтаж <span class="secondary-color">БКТП, БКРТП, КТПН</span>
+                li.main-intro__item Реконструкция <span class="secondary-color">ТП и ГРЩ</span>
+                li.main-intro__item Прокладка кабельных линий <span class="secondary-color">НН и ВН</span>
+                li.main-intro__item Экспертиза проектов в части <span class="secondary-color">АС/ЭС</span>
+            +button({
+                mod: ['bg-secondary', 'large'],
+                mix: 'main-intro__button',
+                text: 'Оставить заявку',
+                js: 'main-intro-button'
+            })

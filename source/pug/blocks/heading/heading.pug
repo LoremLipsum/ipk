@@ -1,0 +1,9 @@
+mixin heading(data)
+    +el({
+        tag: data.tag,
+        class: 'heading',
+        mix: data.mix,
+        mod: data.mod,
+        js: data.js,
+        text: data.text,
+    })&attributes(attributes)

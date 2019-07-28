@@ -1,0 +1,27 @@
+mixin callback(data)
+    +el({
+        tag: 'section',
+        class: 'callback',
+        mix: data.mix,
+        mod: data.mod,
+        js: data.js,
+    })&attributes(attributes)
+        .callback__inner
+            .callback__text-wrap
+                h2.callback__heading Заказать звонок
+                p.callback__text Вы&nbsp;можете оставить номер и&nbsp;я&nbsp;перезвоню вам в&nbsp;ближайшее&nbsp;время
+            +form({
+                class: 'callback__form',
+            })
+                .callback__field-group
+                    +field({
+                        type: 'tel',
+                        placeholder: '+7 (___) ___-__-__ ',
+                        mix: 'callback__field',
+                    })
+                    +button({
+                        text: 'Отправить',
+                        type: 'submit',
+                        mix: 'callback__submit',
+                        mod: ['large']
+                    })

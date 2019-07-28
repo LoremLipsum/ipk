@@ -5,8 +5,8 @@ module.exports = gulp.series(
   gulp.parallel(
     'pug',
     'sass',
-    'sassCopy',
-    'sassCopyBlock',
+    // 'sassCopy',
+    // 'sassCopyBlock',
     'scripts',
     'fonts',
     'favicon',
@@ -14,6 +14,6 @@ module.exports = gulp.series(
     'upload',
     'libScripts',
     'libStyles',
-    'spriteSvg',
+    // 'spriteSvg',
   ),
 );

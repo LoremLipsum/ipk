@@ -1,0 +1,37 @@
+mixin services(data)
+    -
+        var services = [
+                {
+                    heading: 'Установка БКТП, БКРТП, КТПН',
+                    image: 'services-01.jpg',
+                },
+                {
+                    heading: 'Реконструкция ТП и&nbsp;ГРЩ',
+                    image: 'services-02.jpg',
+                },
+                {
+                    heading: 'Прокладка кабельных линий НН&nbsp;и&nbsp;ВН',
+                    image: 'services-03.jpg',
+                },
+            ]
+
+    +el({
+        tag: 'section',
+        class: 'services',
+        mix: data.mix,
+        mod: data.mod,
+        js: data.js,
+    })&attributes(attributes)
+        .services__inner
+            +heading({
+                tag: 'h2',
+                text: 'Услуги',
+                mod: 'centred',
+            })
+            ul.services__list
+                each item in services
+                    li.services__item
+                        +services-card({
+                            heading: item.heading,
+                            image: item.image,
+                        })

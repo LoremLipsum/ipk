@@ -1,0 +1,22 @@
+extends ./templates/template
+
+block vars
+    - var pageTitle = 'title'
+    - var pageId = 1
+
+block content
+    main.main-content
+        +intro({
+            mix: 'main-content__intro',
+        })
+        +about({
+            mix: 'main-content__about',
+        })
+        +features({
+            mix: 'main-content__features',
+        })
+        +services({
+            mix: 'main-content__services',
+        })
+        +callback({
+        })

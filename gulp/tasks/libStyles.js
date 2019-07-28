@@ -6,15 +6,16 @@ const $ = gulpLoadPlugins();
 
 module.exports = () => (
   gulp.src(config.src.libStyles)
-    // .pipe($.concat('libs.css'))
     .pipe($.plumber({ errorHandler: config.onError }))
-    .pipe($.sass())
     .pipe(gulp.dest(config.dest.libStyles))
+    .pipe($.concat('libs.css'))
+    .pipe($.sass())
+    .pipe(gulp.dest(config.dest.css))
     .pipe($.csso({
       restructure: false,
       sourceMap: true,
       debug: true,
     }))
     .pipe($.rename({suffix: '.min'}))
-    .pipe(gulp.dest(config.dest.libStyles))
+    .pipe(gulp.dest(config.dest.css))
 );

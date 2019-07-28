@@ -7,15 +7,16 @@ mixin main-footer(data)
         js: data.js,
     })&attributes(attributes)
         .main-footer__main
-            .main-footer__wrapper
+            .main-footer__inner
                 +el({
                     tag: 'ul',
                     class: 'main-footer__nav-list',
                 })(role='navigation' aria-label='Дополнительное меню' itemscope itemtype='http://schema.org/SiteNavigationElement')
-                    each item in ['Главная', 'Обо мне', 'Установка БКТП', 'Реконструкция ГРЩ', 'Прокладка линий НН И ВН', 'Контакты']
+                    each item, index in ['Главная', 'Обо мне', 'Установка БКТП', 'Реконструкция ГРЩ', 'Прокладка линий НН И ВН', 'Контакты']
                         +el({
                             tag: 'li',
                             class: 'main-footer__nav-item',
+                            mix: index == 0 ? 'active' : ''
                         })(itemprop='name')
                             +el({
                                 tag: 'a',
@@ -23,22 +24,25 @@ mixin main-footer(data)
                                 class: 'main-footer__nav-link',
                             })(itemprop='url')
                 +el({
-                    class: 'main-footer__contacts',
+                    tag: 'ul',
+                    class: 'main-footer__contacts-list',
                 })
-                    +el({
-                        tag: 'a',
-                        href: 'tel:+74954545555',
-                        class: 'main-footer__contacts-link',
-                        mod: 'tel',
-                        text: 'Email: +7(495) 454 5555'
-                    })
-                    +el({
-                        tag: 'a',
-                        href: 'mailto:mail@gmail.com',
-                        class: 'main-footer__contacts-link',
-                        mod: 'email',
-                        text: 'Email: mail@gmail.com'
-                    })
+                    li.main-footer__contacts-item
+                        +el({
+                            tag: 'a',
+                            href: 'tel:+74954545555',
+                            class: 'main-footer__contacts-link',
+                            mod: 'tel',
+                            text: 'Тел: +7(495) 454 5555'
+                        })
+                    li.main-footer__contacts-item
+                        +el({
+                            tag: 'a',
+                            href: 'mailto:mail@gmail.com',
+                            class: 'main-footer__contacts-link',
+                            mod: 'email',
+                            text: 'Email: mail@gmail.com'
+                        })
         .main-footer__bottom
-            .main-footer__wrapper
+            .main-footer__inner
                 div.main-footer__copyright &copy;&nbsp;2019 allright.ru. Все права защищены

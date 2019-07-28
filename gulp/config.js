@@ -23,7 +23,7 @@ const config = {
                       'node_modules/jquery/dist/jquery.js',
                       './node_modules/object-fit-images/dist/ofi.js',
                       './node_modules/svg4everybody/dist/svg4everybody.js',
-                      './node_modules/imask/dist/imask.js',
+                      // './node_modules/imask/dist/imask.js',
                       './node_modules/picturefill/dist/picturefill.js',
                       './source/scripts/libs/jquery.fancybox.js',
                       './node_modules/nanoscroller/bin/javascripts/jquery.nanoscroller.js',
@@ -32,7 +32,7 @@ const config = {
                       // 'node_modules/slick-carousel/slick/slick.js',
                       'node_modules/swiper/dist/js/swiper.js',
                       // 'node_modules/baron/baron.js',
-                      // 'node_modules/jquery.maskedinput/src/jquery.maskedinput.js',
+                      'node_modules/jquery.maskedinput/src/jquery.maskedinput.js',
                     ],
     libStyles     : [
                       './node_modules/normalize.css/normalize.css',

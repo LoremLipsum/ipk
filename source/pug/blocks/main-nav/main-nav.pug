@@ -18,12 +18,9 @@ mixin main-nav(data)
                 tag: 'li',
                 class: className + '__item',
                 mix: active,
-                mod: item.mod,
             })(itemprop='name')
                 +el({
                     tag: 'a',
                     class: className + '__link',
-                    text:item.text,
-                    href: item.href,
-                    js: item.js,
+                    text: item,
                 })(itemprop='url')
