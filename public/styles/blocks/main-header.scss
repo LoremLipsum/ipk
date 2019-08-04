@@ -1,0 +1,124 @@
+.main-header__inner {
+  @include inner;
+}
+
+.main-header__top {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  background-color: color(primary);
+  color: color(white);
+
+  .main-header__inner {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.main-header__left,
+.main-header__right {
+  width: calc(50% - 90px);
+}
+
+.main-header__left {
+  margin-right: auto;
+}
+
+.main-header__right {
+  margin-left: auto;
+  text-align: right;
+}
+
+.main-header__panel {
+  width: 100%;
+  max-height: 0;
+  background-color: color(white);
+  overflow: hidden;
+  opacity: 0;
+  @include transition-md;
+
+  &.active {
+    max-height: 9999px;
+    opacity: 1;
+  }
+
+  .main-header__inner {
+    padding-top: 10px;
+    padding-bottom: 30px;
+  }
+}
+
+.main-header__call-up,
+.main-header__btn-call-up {
+  display: none;
+}
+
+@include respond-to(medium) {
+  .main-header__top {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: color(white);
+  }
+
+  .main-header__left,
+  .main-header__button-phone {
+    display: none;
+  }
+
+  .main-header__right {
+    display: flex;
+    align-items: center;
+    width: auto;
+    text-align: left;
+  }
+
+  .main-header__call-up,
+  .main-header__btn-call-up {
+    display: block;
+  }
+
+  .main-header__btn-call-up {
+    margin-left: 40px;
+    text-transform: none;
+    padding: 10px 25px;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0;
+  }
+
+  .main-header__panel {
+    max-height: none;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    background-color: color(primary);
+    opacity: 1;
+
+    .main-header__inner {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+  }
+}
+
+@include respond-to(large) {
+  .main-header__top {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+
+  .main-header__btn-call-up {
+    margin-left: 70px;
+    text-transform: none;
+    padding: 15px 24px;
+    font-size: 18px;
+    line-height: 20px;
+    letter-spacing: 0;
+  }
+
+  .main-header__panel {
+    max-height: none;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    background-color: color(primary);
+    opacity: 1;
+  }
+}

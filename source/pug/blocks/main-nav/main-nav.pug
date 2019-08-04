@@ -22,5 +22,7 @@ mixin main-nav(data)
                 +el({
                     tag: 'a',
                     class: className + '__link',
-                    text: item,
+                    text: item.text,
+                    js: item.js,
+                    href: item.href,
                 })(itemprop='url')

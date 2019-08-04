@@ -1,0 +1,10 @@
+button {
+  display: inline-block;
+  font: inherit;
+  color: inherit;
+  text-transform: inherit;
+  transition: duration(md) func(primary);
+  cursor: pointer;
+  user-select: none;
+  vertical-align: middle;
+}

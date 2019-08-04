@@ -1,2 +1,13 @@
 mixin button-close(data)
-  .button-close&attributes(attributes)
+    +el({
+        tag: 'button',
+        class: 'button-close',
+        mod: data.mod,
+        mix: data.mix,
+        js: data.js,
+        ariaLabel: 'Закрыть окно',
+    })&attributes(attributes)
+        +el({
+            tag: 'span',
+            class: 'button-close__icon',
+        })

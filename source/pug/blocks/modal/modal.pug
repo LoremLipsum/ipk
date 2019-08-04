@@ -1,2 +1,23 @@
 mixin modal(data)
-  .modal&attributes(attributes)
+    +el({
+        class: 'modal',
+        mix: data.mix,
+        mod: data.mod,
+        js: data.js,
+    }).js-modal&attributes(attributes)
+        +overlay({
+            mix: 'modal__overlay active',
+            js: 'modal-overlay'
+        })
+        .modal__dialog
+            +button-close({
+                mix: 'modal__close',
+                js: 'modal-close'
+            })
+            .modal__dialog-inner
+                if data.text
+                    +el({
+                        class: 'modal__text',
+                        text: data.text,
+                    })
+                block

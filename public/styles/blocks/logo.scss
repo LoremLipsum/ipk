@@ -1,0 +1,26 @@
+.logo {
+  display: block;
+  padding: 5px;
+  font-size: 18px;
+  line-height: 20px;
+  font-weight: 300;
+  letter-spacing: 0.02em;
+  color: color(white);
+  text-decoration: none;
+}
+
+@include respond-to(medium) {
+  .logo {
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 500;
+    color: color(primary);
+  }
+}
+
+@include respond-to(large) {
+  .logo {
+    font-size: 24px;
+    line-height: 28px;
+  }
+}

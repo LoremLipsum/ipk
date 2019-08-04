@@ -5,8 +5,8 @@ module.exports = gulp.series(
   gulp.parallel(
     'pug',
     'sass',
-    // 'sassCopy',
-    // 'sassCopyBlock',
+    'sassCopy',
+    'sassCopyBlock',
     'scripts',
     'fonts',
     'favicon',

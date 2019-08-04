@@ -21,5 +21,33 @@ html(lang="ru-RU")
             //-     js: 'page-up'
             //- })
         block modal
+        +modal({
+            js: 'callback-modal',
+            text: 'Вы можете оставить номер и&nbsp;я&nbsp;перезвоню вам в&nbsp;ближайшее время',
+        })
+            +form({})
+                .modal__fields-group
+                    +field({
+                        type: 'text',
+                        mix: 'modal__field',
+                        label: 'Введите ваше имя',
+                        required: 'true',
+                        placeholder: 'Имя'
+                    })
+                    +field({
+                        type: 'tel',
+                        mix: 'modal__field',
+                        label: 'Введите ваш телефон',
+                        required: 'true',
+                        placeholder: 'Телефон'
+                    })
+                .modal__submit-wrap
+                    +button({
+                        mod: ['bg-secondary', 'large'],
+                        text: 'Отправить',
+                    })
+                p.modal__note Предоставляя свои контакты, вы соглашаетесь с&nbsp;политикой конфиденциальности.
+
+        block pageModal
         block scripts
             +scripts()

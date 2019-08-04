@@ -28,10 +28,34 @@ mixin main-header(data)
                         text: 'Заказать звонок',
                         mod: ['bg-secondary'],
                         mix: 'main-header__btn-call-up',
+                        js: 'callback-button'
                     })
         nav.main-header__panel.js-main-nav-panel(aria-label='Основное меню' itemscope itemtype='http://schema.org/SiteNavigationElement')
             .main-header__inner
                 +main-nav({
                     mix: 'main-header__main-nav',
-                    items: ['Главная', 'Обо мне', 'Установка БКТП', 'Реконструкция ГРЩ', 'Прокладка линий НН И ВН', 'Контакты']
+                    items: [
+                        {
+                            text: 'Главная',
+                        },
+                        {
+                            text: 'Обо мне',
+                            href: '#about',
+                            js: 'anchor',
+                        },
+                        {
+                            text: 'Установка БКТП',
+                        },
+                        {
+                            text: 'Реконструкция ГРЩ',
+                        },
+                        {
+                            text: 'Прокладка линий НН И ВН',
+                        },
+                        {
+                            text: 'Контакты',
+                            href: '#callback',
+                            js: 'anchor',
+                        },
+                    ]
                 })

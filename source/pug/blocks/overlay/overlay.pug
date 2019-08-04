@@ -1,2 +1,7 @@
 mixin overlay(data)
-  .overlay&attributes(attributes)
+    +el({
+        class: 'overlay',
+        mix: data.mix,
+        mod: data.mod,
+        js: data.js,
+    })&attributes(attributes)

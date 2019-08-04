@@ -7,16 +7,54 @@ block vars
 block content
     main.main-content
         +main-intro({
-            mix: 'main-content__main-intro',
         })
         +about({
-            mix: 'main-content__about',
         })
         +features({
-            mix: 'main-content__features',
         })
         +services({
             mix: 'main-content__services',
         })
         +callback({
         })
+
+block pageModal
+    +modal({
+        js: 'feedback-modal',
+        text: 'Можете задать интересующий вас вопрос написав мне на почту',
+    })
+        +form({})
+            .modal__fields-group
+                +field({
+                    type: 'text',
+                    mix: 'modal__field',
+                    label: 'Введите ваше имя',
+                    required: 'true',
+                    placeholder: 'Имя'
+                })
+                +field({
+                    type: 'tel',
+                    mix: 'modal__field',
+                    label: 'Введите ваш телефон',
+                    required: 'true',
+                    placeholder: 'Телефон'
+                })
+                +field({
+                    type: 'email',
+                    mix: 'modal__field',
+                    label: 'Введите ваш email',
+                    required: 'true',
+                    placeholder: 'Email'
+                })
+                +field({
+                    tag: 'textarea',
+                    mix: 'modal__field',
+                    label: 'Введите ваше сообщение',
+                    placeholder: 'Сообщение',
+                })
+            .modal__submit-wrap
+                +button({
+                    mod: ['bg-secondary', 'large'],
+                    text: 'Отправить',
+                })
+            p.modal__note Предоставляя свои контакты, вы соглашаетесь с&nbsp;политикой конфиденциальности.

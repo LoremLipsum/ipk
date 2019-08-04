@@ -4,7 +4,7 @@ mixin callback(data)
         class: 'callback',
         mix: data.mix,
         mod: data.mod,
-        js: data.js,
+        id: 'callback',
     })&attributes(attributes)
         .callback__inner
             .callback__text-wrap
@@ -25,3 +25,4 @@ mixin callback(data)
                         mix: 'callback__submit',
                         mod: ['large']
                     })
+                p.callback__note Предоставляя свои контакты, вы соглашаетесь с&nbsp;политикой конфиденциальности.
