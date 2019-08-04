@@ -1,0 +1,143 @@
+.main-intro {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 360px;
+  padding: 20px 0;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-image: url("../assets/images/main-intro-mob.jpg");
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: linear-gradient(180deg, rgba(0, 39, 78, 0) 0%, rgba(0, 39, 78, 0.6) 100%), linear-gradient(0deg, rgba(0, 39, 78, 0.26), rgba(0, 39, 78, 0.26));
+  }
+}
+
+.main-intro__inner {
+  position: relative;
+  z-index: 1;
+  height: 100%;
+  @include inner;
+}
+
+.main-intro__list {
+  position: relative;
+  @include ul-no;
+  margin-bottom: 50px;
+  padding-left: 15px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 0;
+    bottom: 2px;
+    width: 4px;
+    background-color: color(secondary);
+  }
+}
+
+.main-intro__item {
+  margin-bottom: 7px;
+  font-weight: 700;
+  font-size: 14px;
+  color: color(white);
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.main-intro__button {
+  display: block;
+  margin: 0 auto;
+}
+
+@include respond-to(medium) {
+  .main-intro {
+    min-height: 460px;
+    padding: 30px 0;
+    background-image: url("../assets/images/main-intro.jpg");
+  }
+
+  .main-intro__list {
+    margin-bottom: 50px;
+    padding-left: 25px;
+
+    &::before {
+      top: 6px;
+      bottom: 6px;
+      width: 5px;
+    }
+  }
+
+  .main-intro__item {
+    margin-bottom: 12px;
+    font-weight: 400;
+    font-size: 24px;
+  }
+
+  .main-intro__button {
+    margin-left: 25px;
+  }
+}
+
+@include respond-to(medium-lg) {
+  .main-intro {
+    min-height: 560px;
+  }
+
+  .main-intro__list {
+    padding-left: 30px;
+
+    &::before {
+      top: 8px;
+      bottom: 8px;
+      width: 6px;
+    }
+  }
+
+  .main-main-intro__item {
+    margin-bottom: 16px;
+    font-size: 30px;
+  }
+
+  .main-intro__button {
+    margin-left: 30px;
+  }
+}
+
+@include respond-to(large) {
+  .main-intro {
+    min-height: 660px;
+    padding: 50px 0;
+  }
+
+  .main-intro__list {
+    margin-bottom: 60px;
+    padding-left: 40px;
+
+    &::before {
+      top: 10px;
+      bottom: 10px;
+      width: 8px;
+    }
+  }
+
+  .main-intro__item {
+    margin-bottom: 18px;
+    font-size: 36px;
+  }
+
+  .main-intro__button {
+    margin-left: 40px;
+  }
+}

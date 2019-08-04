@@ -1,0 +1,35 @@
+.services {
+  padding-top: 25px;
+}
+
+.services__inner {
+  @include inner-md;
+}
+
+.services__list {
+  @include ul-no;
+}
+
+@include respond-to(medium) {
+  .services {
+    padding-top: 35px;
+  }
+
+  .services__list {
+    display: flex;
+    margin-bottom: -20px;
+    margin-right: -20px;
+  }
+
+  .services__item {
+    width: 33.33%;
+    padding-right: 20px;
+    margin-bottom: 20px;
+  }
+}
+
+@include respond-to(large) {
+  .services {
+    padding-top: 45px;
+  }
+}

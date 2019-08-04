@@ -37,7 +37,7 @@
               <a class="call-up__link" href="tel:+74954545555">+7(495) 454 5555
               </a>
             </div>
-            <button class="button button--bg-secondary main-header__btn-call-up" type="button">Заказать звонок
+            <button class="button button--bg-secondary main-header__btn-call-up js-callback-button" type="button">Заказать звонок
             </button>
           </div>
         </div>
@@ -50,7 +50,7 @@
               </a>
             </li>
             <li class="main-nav__item" itemprop="name">
-              <a class="main-nav__link" href="#nohere" itemprop="url">Обо мне
+              <a class="main-nav__link js-anchor" href="#about" itemprop="url">Обо мне
               </a>
             </li>
             <li class="main-nav__item" itemprop="name">
@@ -66,7 +66,7 @@
               </a>
             </li>
             <li class="main-nav__item" itemprop="name">
-              <a class="main-nav__link" href="#nohere" itemprop="url">Контакты
+              <a class="main-nav__link js-anchor" href="#callback" itemprop="url">Контакты
               </a>
             </li>
           </ul>
@@ -123,6 +123,39 @@
         </div>
       </div>
     </footer>
+    <div class="modal js-callback-modal js-modal">
+      <div class="overlay modal__overlay active js-modal-overlay">
+      </div>
+      <div class="modal__dialog">
+        <button class="button-close modal__close js-modal-close" aria-label="Закрыть окно" type="button">
+          <span class="button-close__icon">
+          </span>
+        </button>
+        <div class="modal__dialog-inner">
+          <div class="modal__text">Вы можете оставить номер и&nbsp;я&nbsp;перезвоню вам в&nbsp;ближайшее время
+          </div>
+          <form action="/" method="post" accept-charset="UTF-8">
+            <div class="modal__fields-group">
+              <label class="field modal__field">
+                <span class="hidden">Введите ваше имя
+                </span>
+                <input class="field__input" tabindex="0" placeholder="Имя" required type="text">
+              </label>
+              <label class="field modal__field">
+                <span class="hidden">Введите ваш телефон
+                </span>
+                <input class="field__input" tabindex="0" placeholder="Телефон" required type="tel">
+              </label>
+            </div>
+            <div class="modal__submit-wrap">
+              <button class="button button--bg-secondary button--large" type="button">Отправить
+              </button>
+            </div>
+            <p class="modal__note">Предоставляя свои контакты, вы соглашаетесь с&nbsp;политикой конфиденциальности.</p>
+          </form>
+        </div>
+      </div>
+    </div>
     <script src="./scripts/libs.min.js"></script>
     <script src="./scripts/scripts.min.js"></script>
   </body>

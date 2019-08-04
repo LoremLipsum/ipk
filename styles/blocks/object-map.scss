@@ -1,0 +1,77 @@
+.object-map {
+  display: none;
+}
+
+@include respond-to(medium) {
+  .object-map {
+    display: block;
+    padding-top: 35px;
+  }
+
+  .object-map__inner {
+    @include inner;
+  }
+
+  .object-map__content {
+    display: flex;
+  }
+
+  .object-map__text-wrap {
+    width: 24vw;
+    padding-right: 20px;
+  }
+
+  .object-map__map {
+    display: block;
+    width: calc(100% - 24vw);
+    height: 35vw;
+    min-height: 320px;
+    background-color: color(light);
+  }
+
+  .object-map__pin {
+    position: relative;
+    display: block;
+    width: 30px;
+    height: 40px;
+    padding: 0;
+    background-image: url('../assets/images/pin.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    overflow: visible;
+    cursor: pointer;
+    transition: duration(md) func(primary);
+
+    &.active {
+      .object-map__pin-number {
+        background: color(primary);
+      }
+    }
+  }
+
+  .object-map__pin-dot {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    box-sizing: border-box;
+  }
+}
+
+@include respond-to(large) {
+  .object-map__text-wrap {
+    width: 340px;
+    padding-top: 45px;
+  }
+
+  .object-map__map {
+    width: calc(100% - 340px);
+    height: 500px;
+  }
+}

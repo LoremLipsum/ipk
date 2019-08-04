@@ -1,0 +1,23 @@
+.button-close {
+  position: relative;
+  display: block;
+  width: 40px;
+  height: 40px;
+  padding: 5px;
+  border-radius: 50%;
+  background-color: transparent;
+  border: none;
+
+  @include hover {
+    background-color: rgba(color(white), 0.2);
+  }
+}
+
+.button-close__icon {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+
+  @include icon-cross(1px, color(white), 45deg);
+}

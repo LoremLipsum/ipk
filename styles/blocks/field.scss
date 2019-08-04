@@ -1,0 +1,41 @@
+.field {
+  position: relative;
+  display: block;
+  width: 100%;
+  overflow: hidden;
+}
+
+.field__input {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding: 5px 10px;
+  border: none;
+  background-color: color(white);
+  color: color(black);
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 20px;
+  transition: duration(md) func(primary);
+
+  &::placeholder {
+    color: color(black);
+  }
+
+  &:hover,
+  &:focus,
+  &.active {
+    border-color: color(secondary);
+  }
+
+  &:disabled,
+  &.disabled {
+    color: color(disabled);
+    pointer-events: none;
+  }
+}
+
+textarea.field__input {
+  resize: vertical;
+  min-height: 94px;
+}

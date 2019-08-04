@@ -1,0 +1,55 @@
+@mixin inner {
+  padding-left: pads(small);
+  padding-right: pads(small);
+
+  @include respond-to(medium) {
+    padding-left: pads(medium);
+    padding-right: pads(medium);
+  }
+
+  @include respond-to(large) {
+    width: width(large);
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: pads(large);
+    padding-right: pads(large);
+  }
+}
+
+@mixin inner-md {
+  @include respond-to(medium) {
+    padding-left: pads(medium);
+    padding-right: pads(medium);
+  }
+
+  @include respond-to(large) {
+    width: width(large);
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: pads(large);
+    padding-right: pads(large);
+  }
+}
+
+@mixin inner-centred {
+  padding-left: pads(small);
+  padding-right: pads(small);
+
+  @include respond-to(medium) {
+    padding-left: pads(medium);
+    padding-right: pads(medium);
+  }
+
+  @include respond-to(medium-lg) {
+    padding-left: pads(medium-lg);
+    padding-right: pads(medium-lg);
+  }
+
+  @include respond-to(large) {
+    width: width(large);
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: pads(large-lg);
+    padding-right: pads(large-lg);
+  }
+}
