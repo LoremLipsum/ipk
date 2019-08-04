@@ -1,7 +1,0 @@
-@mixin transition-md {
-  transition: duration(md) func(primary);
-}
-
-@mixin transition($duration) {
-  transition: $duration func(primary);
-}
